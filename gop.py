@@ -44,8 +44,9 @@ def update():
             giaodienchinh()
             console.print("[red1]Đang cập nhật phiên bản mới nhất ...")
             response = requests.get("https://raw.githubusercontent.com/zatasama/tool/refs/heads/main/gop.py?token=GHSAT0AAAAAADCE37G7ZPZRPOMCXC6DLO4M2AHT7LQ")
-            with open("gop.py", "wb") as f:
-                f.write(response.content)
+            current_file = os.path.abspath(__file__)
+            with open(current_file, "wb",encoding="utf-8") as f:
+                f.write(response.text)
                 console.print("[green1]Đã cập nhật tool mới nhất vào lại để thưởng thức!")
                 input("enter to exit....")
                 sys.exit()
@@ -55,9 +56,10 @@ def update():
         console.print("[red1]Đang cập nhật phiên bản mới nhất ...")
         with open("version.txt", "w") as f:
             f.write(check_update())
+        current_file = os.path.abspath(__file__)
         response2 = requests.get("https://raw.githubusercontent.com/zatasama/tool/refs/heads/main/gop.py?token=GHSAT0AAAAAADCE37G7ZPZRPOMCXC6DLO4M2AHT7LQ")
-        with open("gop.py", "wb") as f:
-            f.write(response2.content)
+        with open(current_file, "wb",encoding="utf-8") as f:
+            f.write(response2.text)
             console.print("[green1]Đã cập nhật tool mới nhất vào lại để thưởng thức!")
             input("enter to exit....")
             sys.exit()
