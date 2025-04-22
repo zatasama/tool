@@ -43,7 +43,7 @@ def update():
         if version != update:
             giaodienchinh()
             console.print("[red1]Đang cập nhật phiên bản mới nhất ...")
-            response = requests.get("https://drive.usercontent.google.com/download?id=1r2-MQT6ZR_Ox24inqdj-T9F-PTl_VHis&export=download&authuser=0&confirm=t&uuid=805f4013-74c4-4e5d-a392-9db23d73a5ea&at=APcmpoxfj-4GfQ4lt5LhGJA78XPS%3A1745325404372")
+            response = requests.get("https://raw.githubusercontent.com/zatasama/tool/refs/heads/main/gop.py?token=GHSAT0AAAAAADCE37G7ZPZRPOMCXC6DLO4M2AHT7LQ")
             with open("gop.py", "wb") as f:
                 f.write(response.content)
                 console.print("[green1]Đã cập nhật tool mới nhất vào lại để thưởng thức!")
@@ -55,7 +55,7 @@ def update():
         console.print("[red1]Đang cập nhật phiên bản mới nhất ...")
         with open("version.txt", "w") as f:
             f.write(check_update())
-        response2 = requests.get("https://drive.usercontent.google.com/download?id=1r2-MQT6ZR_Ox24inqdj-T9F-PTl_VHis&export=download&authuser=0&confirm=t&uuid=805f4013-74c4-4e5d-a392-9db23d73a5ea&at=APcmpoxfj-4GfQ4lt5LhGJA78XPS%3A1745325404372")
+        response2 = requests.get("https://raw.githubusercontent.com/zatasama/tool/refs/heads/main/gop.py?token=GHSAT0AAAAAADCE37G7ZPZRPOMCXC6DLO4M2AHT7LQ")
         with open("gop.py", "wb") as f:
             f.write(response2.content)
             console.print("[green1]Đã cập nhật tool mới nhất vào lại để thưởng thức!")
